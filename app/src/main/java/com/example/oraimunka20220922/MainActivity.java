@@ -2,6 +2,7 @@ package com.example.oraimunka20220922;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.graphics.ColorSpace;
 import android.os.Bundle;
 import android.view.View;
@@ -44,6 +45,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String szoveg = inputText.getText().toString();
                 textView.setText(szoveg);
+                Random rnd = new Random();
+                int red = rnd.nextInt(256);
+                int green = rnd.nextInt(256);
+                int blue = rnd.nextInt(256);
+                textView.setBackgroundColor(Color.rgb(red, green, blue));
             }
         });
     }
